@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mobolu Olowoyeye</title>
+        <meta name="description" content="Mobolu Olowoyeye is a software engineer and AI ethics 
+        speaker, currently on placement with Kraken Technologies while studying AI at King's College London.">
+        <style>
+            :root {
+                --bg: #0D0D0D;
+                --ink: #FFFFFF;
+                --ink-soft: #A3A3A3;
+                --accent: #FFC700;
+                --accent-2: #FF3B5C;
+                --accent-soft: rgba(255,199,0,0.08);
+                --line: #262626;
+                --max-width: 720px;
+            }
+
+            * {box-sizing: border-box; }
+
+            /* When the page jumps to an anchor like the nav links (about, experience, etc.), smooth animates the scroll, gliding down the page rather than jumping abruptly.*/
+            html {scroll-behavior: smooth; } 
+
+            body{
+                margin: 0;
+                background: var(--bg);
+                color: var(--ink);
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+                font-size: 17px;
+                line-height: 1.6;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            h1,h2,h3 {
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+                font-weight: 500;
+                color: var(--ink);
+                margin: 0;
+            }
+
+            a {
+                color: var(--accent-2);
+                text-decoration: none;
+                border-bottom: 1px solid transparent;
+                transition: border-color 0.15s ease;
+            }
+
+            a:hover, a:focus-visible {
+                outline: 2px solid var(--accent);
+                outline-offset: 3px;
+            }
+
+            .wrap {
+                max-width: var(--max-width);
+                margin: 0 auto;
+                padding: 0 24px; /* 2 values: first is top/bottom, second is left/right (margin: 0 auto; = 0 on top and bottom, auto on left and right) */
+            }
+
+            header.site-nav {
+                padding: 28px 0;
+                border-bottom: 1px solid var(--line);
+            }
+
+            header.site-nav .wrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .site-name {
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+                font-size: 19px;
+            }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                gap: 22px;
+                margin: 0;
+                padding: 0;
+                font-size: 15px;
+            }
+
+            nav a {
+                color: var(--ink-soft);
+                border-bottom: none;
+            }
+
+            nav a:hover {
+                color: var(--accent-2);
+            }
+
+            section {
+                padding: 72px 0;
+                border-bottom: 1px solid var(--line);
+            }
+
+            section:last-of-type {
+                border-bottom: none;
+            }
+
+            .hero {
+                padding-top: 88px;
+                padding-bottom: 88px;
+            }
+
+            .hero .wrap {
+                display: flex;
+                align-items: center;
+                gap: 48px;
+            }
+
+            .hero-text {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .hero-photo {
+                flex-shrink: 0;
+                width: 200px;
+                height: 240px;
+                border: 1px dashed var(--line);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: var(--ink-soft);
+                font-size: 13px;
+                line-height: 1.4;
+                padding: 12px;
+            }
+
+            .hero h1 {
+                font-size: clamp(34px, 5.5vw, 48px);
+                font-weight: 700;
+                line-height: 1.15;
+                letter-spacing: -0.01em;
+            }
+
+            .hero .role {
+                margin-top: 18px;
+                color: var(--ink-soft);
+                font-size: 18px;
+                max-width: 50ch;
+            }
+
+            .hero .links {
+                margin: 32px;
+                display: flex;
+                gap: 20px;
+                font-size: 18px;
+            }
+
+            h2.section-title {
+                font-size: 26px;
+                margin-bottom: 28px;
+            }
+
+            p {
+                margin: 0 0 16px 0;
+            }
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+
+            .timeline {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .timeline li {
+                display: grid;
+                grid-template-columns: 130px 1fr;
+                gap: 20px;
+                padding: 18px 0;
+                border-top: 1px solid var(--line);
+            }
+
+            .timeline li:first-child {
+                border-top: none;
+                padding-top: 0;
+            }
+
+            .timeline .when {
+                color: var(--ink-soft);
+                font-size: 14px;
+                padding-top: 3px;
+            }
+
+            .timeline .what strong {
+                font-weight: 600;
+            }
+
+            .timeline .what .where {
+                color: var(--ink-soft);
+                display: block;
+                font-size: 15px;
+                margin-top: 2px;
+            }
+
+            .speaking-note {
+                font-style: italic;
+                color: var(--ink-soft);
+            }
+
+            .form-button {
+                display: inline-block;
+                margin: 20px 0 32px;
+                padding: 13px 28px;
+                background: var(--accent);
+                color:#0D0D0D;
+                font-size: 15px;
+                font-weight: 700;
+                border-bottom: none;
+            }
+
+            .form-button:hover, .form-button:focus-visible {
+                background: var(--accent-2);
+                color: #FFFFFF;
+                border-bottom: none;
+            }
+
+            .opp-list li {
+                padding: 16px 0;
+                border-top: 1px solid var(--line);
+                font-size: 16px;
+            }
+
+            .opp-list li:first-child {
+                border-top: none;
+                padding-top: 0;
+            }
+
+            .contact-links {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                font-size: 16px
+            }
+
+            footer {
+                padding: 40px 0 60px;
+                color: var(--ink-soft);
+                font-size: 14px;
+            }
+
+            @media (max-width: 560px) {
+                .timeline li {
+                    grid-template-columns: 1fr;
+                    gap: 4px;
+                }
+                section {padding: 52px 0; }
+                .hero { padding-top: 56px; padding-bottom: 56px; }
+                .hero .wrap {
+                    flex-direction: column-reverse;
+                    align-items: flex-start;
+                    gap: 28px;
+                }
+                .hero-photo {
+                    width: 140px;
+                    height: 170px;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <header class="site-nav">
+            <div class="wrap">
+                <div class="site-name">Mobolu</div>
+                <nav aria-label="Primary">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#opportunities">Opportunities</a></li>
+                        <li><a href="#speaking">Speaking</a></li> <!-- Might want to change this tag to #speaking to match-->
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="wrap">
+                    <div class="hero-text">
+                        <h1>Hi, I'm Mobolu.</h1>
+                        <p class="role">
+                            I'm on a software engineering placement with the AI &amp;
+                            Machine Learning team at Kraken, studying AI at King's College London, 
+                            and I speak about tech and AI ethics on the side.
+                        </p>
+                        <div class="links">
+                            <a href="#experience">See my work</a> <!-- might want to point this towards #research instead -->
+                            <a href="#contact">Get in touch</a>
+                        </div>
+                    </div>
+                    <div class="hero-photo">Add your photo here</div>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="wrap">
+                    <h2 class="section-title">About</h2>
+                    <p>I'm a second-year AI student at King's College London. Right now I'm about two months
+                    into a year-long placement with Kraken's AI &amp; Machine Learning team, which mostly means
+                    I spend my days figuring out how to make AI systems actually work in production, not just in a notebook.</p>
+                    <p>Outside of that, I write and speak about AI ethics, and about what it actually takes to get into tech 
+                    if you don't look like the people who usually do. I run <a href="https://instagram.com/mobsintech" target="_blank" rel="noopener">@mobsintech</a>
+                    for that, mostly aimed at people earlier in the process than I am.</p>
+                </div>
+            </section>
+
+            <!--Update this section when you have time-->
+            <section id="experience">
+                <div class="wrap">
+                    <h2 class="section-title">Experience</h2>
+                    <ul class="timeline">
+                        <li>
+                            <span class="when">2026 - present</span>
+                            <span class="what">
+                                <strong>Software Engineering Placement</strong>
+                                <span class="where">AI &amp; Machine Learning team, Kraken Technologies</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="when">2024 - present</span>
+                            <span class="what">
+                                <strong>BSc Artificial Intelligence</strong>
+                                <span class="where">King's College London</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+            
+            <section id="research">
+                <div class="wrap">
+                    <h2 class="section-title">Research</h2>
+                    <p>Add a summary of anything you've researched, published, or worked on academically here, papers, 
+                    coursework projects, dissertations, or anything you want people to be able to find.</p>
+                </div>
+            </section>
+
+            <section id="opportunities">
+             <div class="wrap">
+                    <h2 class="section-title">Opportunities</h2>
+                    <p>A running list of programmes, scholarships, and schemes worth applying to if you're
+                     a young person or woman looking to get into tech.</p>
+                     <ul class="opp-list">
+                        <li><a href="#" target="_blank" rel="noopener">Opportunity name — who it's for, deadline</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">Opportunity name — who it's for, deadline</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">Opportunity name — who it's for, deadline</a></li>
+                     </ul>
+                </div>
+            </section>
+
+
+            <section id="speaking">
+                <div class="wrap">
+                    <h2 class="section-title">Speaking &amp; advocacy</h2>
+                    <p>I speak on AI ethics and on making tech feel reachable for people who don't usually see themselves in it. 
+                    Still early days on this front, but the goal is to keep doing bigger versions of it over time.</p>
+                    <p class="speaking-note">I'll list actual talks and features here once I've done a few.</p>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="wrap">
+                    <h2 class="section-title">Contact</h2>
+                    <p>The best way to reach me is through the form below.</p>  <!-- Might want to change this to be booking enquiry specific-->
+                    <a class="form-button" href="https://forms.gle/form-id" target="_blank" rel="noopener"> Get in touch</a>
+                    <div class="contact-links">
+                        <a href="https://instagram.com/mobsintech" target="_blank" rel="noopener">Instagram - @mobsintech</a>
+                        <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+            </section>
+            </main>
+
+            <footer>
+                <div class="wrap">
+                    <p>© 2026 Mobolu Olowoyeye</p>
+                </div>
+            </footer>
+    </body>
+</html>
