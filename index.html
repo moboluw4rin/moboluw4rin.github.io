@@ -266,8 +266,51 @@
                 border-bottom: none;
             }
 
-            .opp-list li {
+            .opp-section {
+                border-top: 1px solid var(--line);
+            }
+
+            .opp-section:first-of-type {
+                border-top: none;
+            }
+
+            .opp-section > summary {
                 padding: 16px 0;
+                cursor: pointer;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 600;
+                font-size: 16px;
+                color: var(--ink);
+                user-select: none;
+            }
+
+            .opp-section > summary::-webkit-details-marker {
+                display: none;
+            }
+
+            .opp-section > summary::after {
+                content: '+';
+                color: var(--accent);
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 1;
+            }
+
+            .opp-section[open] > summary::after {
+                content: '−';
+            }
+
+            .opp-list {
+                margin: 0;
+                padding: 0 0 16px 0;
+                list-style: none;
+            }
+
+            .opp-list li {
+                padding: 14px 0;
                 border-top: 1px solid var(--line);
                 font-size: 16px;
             }
@@ -340,7 +383,7 @@
                         and I speak about tech and AI ethics on the side.
                         </p>
                         <div class="links">
-                            <a href="#experience">See my work</a> <!-- might want to point this towards #research instead -->
+                            <a href="#research">See my work</a> <!-- might want to point this towards #experience instead -->
                             <a href="#contact">Get in touch</a>
                         </div>
                     </div>
@@ -481,15 +524,33 @@
             </section>
 
             <section id="opportunities">
-             <div class="wrap">
+                <div class="wrap">
                     <h2 class="section-title">Opportunities</h2>
                     <p>A running list of programmes, scholarships, and schemes worth applying to if you're
-                     a young person or woman looking to get into tech.</p>
-                     <ul class="opp-list">
-                        <li><a href="https://beleveuk.org" target="_blank" rel="noopener">BelEve UK — Mentoring for women and girls</a></li> <!--may want to include deadlines for applications too-->
-                        <li><a href="https://ther3cruit.co.uk/16-18-opportunities/" target="_blank" rel="noopener">The Recruit — 16-18 year olds</a></li>
-                        <li><a href="https://generatinggenius.org.uk" target="_blank" rel="noopener">Generating Genius — STEM Students year7-uni</a></li>
-                     </ul>
+                    a young person or woman looking to get into tech.</p>
+
+                    <details class="opp-section" open>
+                        <summary>Sixth Form Students</summary>
+                        <ul class="opp-list">
+                            <li><a href="https://ther3cruit.co.uk/16-18-opportunities/" target="_blank" rel="noopener">The Recruit — 16–18 year olds</a></li>
+                            <li><a href="https://generatinggenius.org.uk" target="_blank" rel="noopener">Generating Genius — STEM students, year 7–uni</a></li>
+                        </ul>
+                    </details>
+
+                    <details class="opp-section">
+                        <summary>Undergraduate Students</summary>
+                        <ul class="opp-list">
+                            <li><a href="#" target="_blank" rel="noopener">Opportunity name — who it's for, deadline</a></li>
+                        </ul>
+                    </details>
+
+                    <details class="opp-section">
+                        <summary>Women &amp; BAME</summary>
+                        <ul class="opp-list">
+                            <li><a href="https://beleveuk.org" target="_blank" rel="noopener">BelEve UK — Mentoring for women and girls</a></li>
+                        </ul>
+                    </details>
+
                 </div>
             </section>
 
