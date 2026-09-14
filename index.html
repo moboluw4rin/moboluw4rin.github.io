@@ -121,8 +121,8 @@
 
             .hero-photo {
                 flex-shrink: 0;
-                width: 200px;
-                height: 240px;
+                width: 300px;
+                height: 360px;
                 object-fit: cover;
                 border: none;
             }
@@ -142,7 +142,7 @@
             }
 
             .hero .links {
-                margin: 32px;
+                margin-top: 32px;
                 display: flex;
                 gap: 20px;
                 font-size: 18px;
@@ -164,20 +164,67 @@
             .timeline {
                 list-style: none;
                 margin: 0;
-                padding: 0;
+                padding: 0 0 0 28px;
+                position: relative;
+            }
+
+            .timeline::before {
+                content: '';
+                position: absolute;
+                left: 7px;
+                top: 6px;
+                bottom: 6px;
+                width: 2px;
+                background: var(--line);
             }
 
             .timeline li {
                 display: grid;
                 grid-template-columns: 130px 1fr;
                 gap: 20px;
-                padding: 18px 0;
-                border-top: 1px solid var(--line);
+                padding: 16px 0;
+                position: relative;
+                opacity: 0;
+                transform: translateX(-14px);
+                transition: opacity 0.45s ease, transform 0.45s ease;
             }
 
-            .timeline li:first-child {
-                border-top: none;
-                padding-top: 0;
+            .timeline li.visible {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .timeline li::before {
+                content: '';
+                position: absolute;
+                left: -23px;
+                top: 21px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: var(--bg);
+                border: 2px solid var(--ink-soft);
+                z-index: 1;
+            }
+
+            .timeline li.current::before {
+                background: var(--accent);
+                border-color: var(--accent);
+                box-shadow: 0 0 0 3px rgba(255,199,0,0.15);
+            }
+
+            .timeline li.year-label {
+                display: block;
+                padding: 28px 0 6px;
+                color: var(--accent);
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .timeline li.year-label::before {
+                display: none;
             }
 
             .timeline .when {
@@ -297,7 +344,7 @@
                             <a href="#contact">Get in touch</a>
                         </div>
                     </div>
-                    <div class="hero-photo"><img src="images/my-headshot.jpg" alt="Mobolu Olowoyeye Photo" class="hero-photo"></div>
+                    <img src="images/my-headshot.jpg" alt="Mobolu Olowoyeye" class="hero-photo">
                 </div>
             </section>
 
@@ -318,20 +365,99 @@
                 <div class="wrap">
                     <h2 class="section-title">Experience</h2>
                     <ul class="timeline">
-                        <li>
-                            <span class="when">2026 - present</span>
+
+                        <li class="year-label">2026 - my placement year! found a loVe for Software Engineering</li>
+                        <li class="current">
+                            <span class="when">Jun 2026 – Present</span>
                             <span class="what">
-                                <strong>Software Engineering Placement</strong>
-                                <span class="where">AI &amp; Machine Learning team, Kraken Technologies</span>
+                                <strong>Software Engineer Intern (AI &amp; ML)</strong>
+                                <span class="where">Kraken Technologies · Full-time · Hybrid, London</span>
                             </span>
                         </li>
                         <li>
-                            <span class="when">2024 - present</span>
+                            <span class="when">Apr 2026</span>
                             <span class="what">
-                                <strong>BSc Artificial Intelligence</strong>
-                                <span class="where">King's College London</span>
+                                <strong>Software Engineering Spring Intern</strong>
+                                <span class="where">JPMorganChase · On-site, London</span>
                             </span>
                         </li>
+
+                        <li class="year-label">2025 - 4 internships, 4 different fields</li>
+                        <li>
+                            <span class="when">Aug 2025</span>
+                            <span class="what">
+                                <strong>Insight Week</strong>
+                                <span class="where">PDT Partners · On-site, London</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="when">Aug 2025</span>
+                            <span class="what">
+                                <strong>Technology Work Experience Week</strong>
+                                <span class="where">Kerv · On-site, London</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="when">Jul – Aug 2025</span>
+                            <span class="what">
+                                <strong>King's Undergraduate Research Fellow</strong>
+                                <span class="where">King's College London · Part-time</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="when">Jun – Aug 2025</span>
+                            <span class="what">
+                                <strong>Data Science and Applied AI Intern</strong>
+                                <span class="where">NHS England · London</span>
+                            </span>
+                        </li>
+
+                        <li class="year-label">2023 - A year of exploration</li>
+                        <li>
+                            <span class="when">Aug 2023</span>
+                            <span class="what">
+                                <strong>Summer Work Experience</strong>
+                                <span class="where">Circana · London</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="when">Jul 2023</span>
+                            <span class="what">
+                                <strong>Work Experience Week</strong>
+                                <span class="where">Aon · Greater London</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="when">Jul 2023</span>
+                            <span class="what">
+                                <strong>Work Experience Week</strong>
+                                <span class="where">G-Research · Greater London</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="when">Feb 2023</span>
+                            <span class="what">
+                                <strong>Work Experience Day</strong>
+                                <span class="where">National Grid · London</span>
+                            </span>
+                        </li>
+
+                        <li class="year-label">2022 - My first taste of tech!</li>
+                        <li>
+                            <span class="when">Jul – Aug 2022</span>
+                            <span class="what">
+                                <strong>Data Science Summer Intern</strong>
+                                <span class="where">QBE Insurance · Greater London</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="when">Apr 2022 – Apr 2024</span>
+                            <span class="what">
+                                <strong>Data Science Mentee</strong>
+                                <span class="where">Deliveroo · Greater London</span>
+                            </span>
+                        </li>
+
                     </ul>
                 </div>
 
@@ -339,9 +465,18 @@
             
             <section id="research">
                 <div class="wrap">
-                    <h2 class="section-title">Research</h2>
-                    <p>Add a summary of anything you've researched, published, or worked on academically here, papers, 
+                    <h2 class="section-title">Research &amp; Projects</h2>
+                    <p>Add a summary of anything you've researched, published, or worked on academically here, papers,
                     coursework projects, dissertations, or anything you want people to be able to find.</p>
+                    <ul class="timeline">
+                        <li class="visible">
+                            <span class="when">2025</span>
+                            <span class="what">
+                                <strong><a href="https://github.com/nhsengland/synthetic_clinical_notes" target="_blank" rel="noopener">Synthetic Clinical Notes</a></strong>
+                                <span class="where">NHS England</span>
+                            </span>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
@@ -362,9 +497,25 @@
             <section id="speaking">
                 <div class="wrap">
                     <h2 class="section-title">Speaking &amp; advocacy</h2>
-                    <p>I speak on AI ethics and on making tech feel reachable for people who don't usually see themselves in it. 
+                    <p>I speak on AI ethics and on making tech feel reachable for people who don't usually see themselves in it.
                     Still early days on this front, but the goal is to keep doing bigger versions of it over time.</p>
-                    <p class="speaking-note">I'll list actual talks and features here once I've done a few.</p>
+                    <p class="speaking-note">I'll list more talks and features here once I've done a few more.</p>
+                    <ul class="timeline">
+                        <li class="visible">
+                            <span class="when">2025</span>
+                            <span class="what">
+                                <strong><a href="https://www.linkedin.com/posts/mobolu-olowoyeye_kingscollegelondon-keynote-publicspeaking-activity-7503838524509495298-ZJMo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4BsegBdBC20xrWwUNOl46gO3AKdkgDEsw" target="_blank" rel="noopener">Keynote Speaker</a></strong>
+                                <span class="where">King's College London Black Access Project Event</span>
+                            </span>
+                        </li>
+                        <li class="visible">
+                            <span class="when">2023</span>
+                            <span class="what">
+                                <strong><a href="https://www.whsb.essex.sch.uk/key-information/news/whsbs-annual-celebration-of-international-womens-day-iwd" target="_blank" rel="noopener">International Women's Day Speech</a></strong>
+                                <span class="where">Celebrating Women in STEM · Westcliff High School for Boys</span>
+                            </span>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
@@ -375,7 +526,7 @@
                     <a class="form-button" href="https://docs.google.com/forms/d/e/1FAIpQLSd0YkEjfZ_2QN_5swJ_QwrQgCXYVKepVwOT57Jd5OnDLk5NeA/viewform?usp=publish-editor" target="_blank" rel="noopener"> Get in touch</a>
                     <div class="contact-links">
                         <a href="https://instagram.com/mobsintech" target="_blank" rel="noopener">Instagram - @mobsintech</a>
-                        <a href="www.linkedin.com/in/mobolu-olowoyeye" target="_blank" rel="noopener">LinkedIn - Mobolu Olowyeye</a>
+                        <a href="https://www.linkedin.com/in/mobolu-olowoyeye/" target="_blank" rel="noopener">LinkedIn - Mobolu Olowoyeye</a>
                     </div>
                 </div>
             </section>
@@ -386,5 +537,20 @@
                     <p>© 2026 Mobolu Olowoyeye</p>
                 </div>
             </footer>
+        <script>
+            const timelineItems = document.querySelectorAll('.timeline li');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, i * 60);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+
+            timelineItems.forEach(item => observer.observe(item));
+        </script>
     </body>
 </html>
