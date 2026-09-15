@@ -328,6 +328,24 @@
                 padding-bottom: 4px;
             }
 
+            .speaking-layout {
+                display: flex;
+                gap: 40px;
+                align-items: flex-start;
+            }
+
+            .speaking-content {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .speaking-img {
+                flex-shrink: 0;
+                width: 220px;
+                object-fit: cover;
+                border: none;
+            }
+
             .speaking-note {
                 font-style: italic;
                 color: var(--ink-soft);
@@ -411,6 +429,16 @@
                 font-size: 16px;
             }
 
+            .contact-links a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .contact-links svg {
+                flex-shrink: 0;
+            }
+
             footer {
                 padding: 40px 0 60px;
                 color: var(--ink-soft);
@@ -435,6 +463,12 @@
                 }
                 .project-grid {
                     grid-template-columns: 1fr;
+                }
+                .speaking-layout {
+                    flex-direction: column;
+                }
+                .speaking-img {
+                    width: 100%;
                 }
             }
 
@@ -618,7 +652,7 @@
 
                         <details class="project-card">
                             <summary>
-                                <div class="project-thumb">Add image</div>
+                                <div class="project-thumb"><img src="images/synthetic-clinical-notes.jpg" alt="Synthetic Clinical Notes project"></div>
                                 <strong class="project-title">Synthetic Clinical Notes: Diversifying AI training data in the NHS &amp; LLM Evals</strong>
                             </summary>
                             <p class="project-desc">Generating synthetic clinical notes using large language models to support NHS England's data science and AI work. <a href="https://github.com/nhsengland/synthetic_clinical_notes" target="_blank" rel="noopener">View on GitHub →</a></p>
@@ -626,7 +660,7 @@
 
                         <details class="project-card">
                             <summary>
-                                <div class="project-thumb">Add image</div>
+                                <div class="project-thumb"><img src="images/frt-project-card.jpeg" alt="Facial Recognition Technology project"></div>
                                 <strong class="project-title">Exploring Algorithmic Bias in Facial Recognition Technology</strong>
                             </summary>
                             <p class="project-desc">Academic research poster, titled ‘The Dark Side of AI Facial Recognition: Unveiling the Black Box Bias’, which addresses the problem of algorithmic bias in facial recognition technology. <a href="https://www.linkedin.com/posts/mobolu-olowoyeye_last-friday-i-had-the-honour-of-receiving-activity-7131606468180480000-e-hJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4BsegBdBC20xrWwUNOl46gO3AKdkgDEsw" target="_blank" rel="noopener">View on LinkedIn →</a></p>
@@ -634,7 +668,7 @@
 
                         <details class="project-card">
                             <summary>
-                                <div class="project-thumb">Add image</div>
+                                <div class="project-thumb"><img src="images/saas-project-card.png" alt="Content Moderation SaaS project"></div>
                                 <strong class="project-title">Content Moderation SaaS</strong>
                             </summary>
                             <p class="project-desc">A microservices-based SaaS that automatically screens user comments and messages for toxic, abusive, or harmful language using a fine-tuned DistilBERT model, routing flagged content to human moderators for review. <a href="https://github.com/5CCSACCA/resit-coursework-moboluw4rin" target="_blank" rel="noopener">View on GitHub →</a></p>
@@ -679,25 +713,30 @@
             <section id="speaking">
                 <div class="wrap">
                     <h2 class="section-title">Speaking &amp; advocacy</h2>
-                    <p>I speak on AI ethics and on making tech feel reachable for people who don't usually see themselves in it.
-                    Still early days on this front, but the goal is to keep doing bigger versions of it over time.</p>
-                    <p class="speaking-note">I'll list more talks and features here once I've done a few more.</p>
-                    <ul class="timeline">
-                        <li class="visible">
-                            <span class="when">2025</span>
-                            <span class="what">
-                                <strong><a href="https://www.linkedin.com/posts/mobolu-olowoyeye_kingscollegelondon-keynote-publicspeaking-activity-7503838524509495298-ZJMo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4BsegBdBC20xrWwUNOl46gO3AKdkgDEsw" target="_blank" rel="noopener">Keynote Speaker</a></strong>
-                                <span class="where">King's College London Black Access Project Event</span>
-                            </span>
-                        </li>
-                        <li class="visible">
-                            <span class="when">2023</span>
-                            <span class="what">
-                                <strong><a href="https://www.whsb.essex.sch.uk/key-information/news/whsbs-annual-celebration-of-international-womens-day-iwd" target="_blank" rel="noopener">International Women's Day Speech</a></strong>
-                                <span class="where">Celebrating Women in STEM · Westcliff High School for Boys</span>
-                            </span>
-                        </li>
-                    </ul>
+                    <div class="speaking-layout">
+                        <div class="speaking-content">
+                            <p>I speak on AI ethics and on making tech feel reachable for people who don't usually see themselves in it.
+                            Still early days on this front, but the goal is to keep doing bigger versions of it over time.</p>
+                            <p class="speaking-note">I'll list more talks and features here once I've done a few more.</p>
+                            <ul class="timeline">
+                                <li class="visible">
+                                    <span class="when">2025</span>
+                                    <span class="what">
+                                        <strong><a href="https://www.linkedin.com/posts/mobolu-olowoyeye_kingscollegelondon-keynote-publicspeaking-activity-7503838524509495298-ZJMo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4BsegBdBC20xrWwUNOl46gO3AKdkgDEsw" target="_blank" rel="noopener">Keynote Speaker</a></strong>
+                                        <span class="where">King's College London Black Access Project Event</span>
+                                    </span>
+                                </li>
+                                <li class="visible">
+                                    <span class="when">2023</span>
+                                    <span class="what">
+                                        <strong><a href="https://www.whsb.essex.sch.uk/key-information/news/whsbs-annual-celebration-of-international-womens-day-iwd" target="_blank" rel="noopener">International Women's Day Speech</a></strong>
+                                        <span class="where">Celebrating Women in STEM · Westcliff High School for Boys</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="images/speaking-img.jpg" alt="Mobolu speaking" class="speaking-img">
+                    </div>
                 </div>
             </section>
 
@@ -707,8 +746,18 @@
                     <p>You can reach me through the form below.</p>  <!-- Might want to change this to be booking enquiry specific-->
                     <a class="form-button" href="https://docs.google.com/forms/d/e/1FAIpQLSd0YkEjfZ_2QN_5swJ_QwrQgCXYVKepVwOT57Jd5OnDLk5NeA/viewform?usp=publish-editor" target="_blank" rel="noopener"> Get in touch</a>
                     <div class="contact-links">
-                        <a href="https://instagram.com/mobsintech" target="_blank" rel="noopener">Instagram - @mobsintech</a>
-                        <a href="https://www.linkedin.com/in/mobolu-olowoyeye/" target="_blank" rel="noopener">LinkedIn - Mobolu Olowoyeye</a>
+                        <a href="https://instagram.com/mobsintech" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            @mobsintech
+                        </a>
+                        <a href="https://www.linkedin.com/in/mobolu-olowoyeye/" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            Mobolu Olowoyeye
+                        </a>
                     </div>
                 </div>
             </section>
