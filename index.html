@@ -285,6 +285,36 @@
                 margin-top: 28px;
             }
 
+            .project-grid-a4 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                margin-top: 20px;
+            }
+
+            .project-thumb-a4 {
+                width: 100%;
+                aspect-ratio: 210 / 297;
+                border: 1px dashed var(--line);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--ink-soft);
+                font-size: 13px;
+                transition: border-color 0.2s ease;
+                overflow: hidden;
+            }
+
+            .project-thumb-a4 img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .project-card[open] .project-thumb-a4 {
+                border: 1px solid var(--accent);
+            }
+
             .project-card {
                 cursor: pointer;
             }
@@ -474,6 +504,9 @@
                 .project-grid {
                     grid-template-columns: 1fr;
                 }
+                .project-grid-a4 {
+                    grid-template-columns: 1fr;
+                }
                 .speaking-layout {
                     flex-direction: column;
                 }
@@ -510,8 +543,8 @@
                         <h1>Hi, I'm Mobolu.</h1>
                         <p class="role">
                         I'm an Artificial Intelligence undergraduate with a passion for using technology as a tool for positive change. 
-                        I'm on a software engineering placement with the AI &amp; Machine Learning team at Kraken Technologies, studying AI at King's College London, 
-                        and I speak about tech and AI ethics on the side.
+                        I'm currently studying a BSc in Artificial Intelligence at King's College london. I'm on a software engineering placement with the AI &amp; Machine Learning team at Kraken Technologies,
+                        and I also speak about representation in tech and AI ethics on the side!
                         </p>
                         <div class="links">
                             <a href="#research">See my work</a> <!-- might want to point this towards #experience instead -->
@@ -525,8 +558,8 @@
             <section id="about">
                 <div class="wrap">
                     <h2 class="section-title">About</h2>
-                    <p>I'm a second-year AI student at King's College London. Right now I'm about two months
-                    into a year-long placement with Kraken's AI &amp; Machine Learning team, which mostly means
+                    <p>I'm a 3rd year AI student at King's College London. Right now I'm on
+                     a year-long placement with Kraken's AI &amp; Machine Learning team. 
                     I spend my days figuring out how to make AI systems actually work in production, not just in a notebook.</p>
                     <p>Outside of that, I write and speak about AI ethics, and about what it actually takes to get into tech 
                     if you don't look like the people who usually do. I run <a href="https://instagram.com/mobsintech" target="_blank" rel="noopener">@mobsintech</a>
@@ -541,7 +574,7 @@
                     <div class="timeline">
 
                         <details class="year-section" open>
-                            <summary>2026 — my placement year! found a loVe for Software Engineering</summary>
+                            <summary>2026 — my placement year! found a love for Software Engineering</summary>
                             <ul class="timeline-entries">
                                 <li class="current">
                                     <span class="when">Jun 2026 – Present</span>
@@ -656,8 +689,8 @@
             <section id="research">
                 <div class="wrap">
                     <h2 class="section-title">Research &amp; Projects</h2>
-                    <p>Add a summary of anything you've researched, published, or worked on academically here, papers,
-                    coursework projects, dissertations, or anything you want people to be able to find.</p>
+                    <p>Here I'll add summaries of projects I've researched, published, or worked on academically here, papers,
+                    coursework projects, dissertations, or anything else that's cool!</p>
                     <div class="project-grid">
 
                         <details class="project-card">
@@ -670,10 +703,10 @@
 
                         <details class="project-card">
                             <summary>
-                                <div class="project-thumb"><img src="images/frt-project-card.jpeg" alt="Facial Recognition Technology project"></div>
-                                <strong class="project-title">Exploring Algorithmic Bias in Facial Recognition Technology</strong>
+                                <div class="project-thumb"><img src="images/plant.jpg" alt="Plant"></div>
+                                <strong class="project-title">Plant Disease Classifier</strong>
                             </summary>
-                            <p class="project-desc">Academic research poster, titled ‘The Dark Side of AI Facial Recognition: Unveiling the Black Box Bias’, which addresses the problem of algorithmic bias in facial recognition technology. <a href="https://www.linkedin.com/posts/mobolu-olowoyeye_last-friday-i-had-the-honour-of-receiving-activity-7131606468180480000-e-hJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4BsegBdBC20xrWwUNOl46gO3AKdkgDEsw" target="_blank" rel="noopener">View on LinkedIn →</a></p>
+                            <p class="project-desc">Identifies and classifies plant diseases based on a leaf image.</p>
                         </details>
 
                         <details class="project-card">
@@ -682,6 +715,50 @@
                                 <strong class="project-title">Content Moderation SaaS</strong>
                             </summary>
                             <p class="project-desc">A microservices-based SaaS that automatically screens user comments and messages for toxic, abusive, or harmful language using a fine-tuned DistilBERT model, routing flagged content to human moderators for review. <a href="https://github.com/5CCSACCA/resit-coursework-moboluw4rin" target="_blank" rel="noopener">View on GitHub →</a></p>
+                        </details>
+
+                        <details class="project-card">
+                            <summary>
+                                <div class="project-thumb"><img src="images/ai-healthcare.png" alt="AI Medical Diagnosus"></div>
+                                <strong class="project-title">Care Sense: AI Medical Diagnosis Tool</strong>
+                            </summary>
+                            <p class="project-desc">An AI diagnosis assistant that can aid doctors in diagnosing patients.</p>
+                         </details>   
+
+                        <details class="project-card">
+                            <summary>
+                                <div class="project-thumb"><img src="images/maths-game.png" alt="Maths game for kids"></div>
+                                <strong class="project-title">Maths Game for Kids</strong>
+                            </summary>
+                            <p class="project-desc">Created a gamified maths platform using JavaScript and p5.js, with interactive games for kids to practice arithmetic in an entertaining way.</p>
+                        </details>
+
+                        <details class="project-card">
+                            <summary>
+                                <div class="project-thumb"><img src="images/robotics.png" alt="Photo of my roboitcs lab"></div>
+                                <strong class="project-title">Robotics: Room classification Project</strong>
+                            </summary>
+                            <p class="project-desc">Built a YOLOv4 &  ROS robot system that classifies the room it’s in, detecting objects using weighted object-to-room mappings.</p>
+                        </details>
+
+                    </div>
+
+                    <div class="project-grid-a4">
+
+                        <details class="project-card">
+                            <summary>
+                                <div class="project-thumb-a4"><img src="images/ml-poster.png" alt="ML poster"></div>
+                                <strong class="project-title">Active Learning on a Budget: TPCDC Implementation on CIFAR-10</strong>
+                            </summary>
+                            <p class="project-desc">Short summary of this project — what it does, why it matters, and where to find it.</p>
+                        </details>
+
+                        <details class="project-card">
+                            <summary>
+                                <div class="project-thumb-a4"><img src="images/frt-poster.jpeg" alt="FRT poster"></div>
+                                <strong class="project-title">The Dark Side of AI Facial Recognition: Unveiling the Black Box Bias</strong>
+                            </summary>
+                            <p class="project-desc">Academic research poster, titled ‘The Dark Side of AI Facial Recognition: Unveiling the Black Box Bias’, which addresses the problem of algorithmic bias in facial recognition technology. <a href="https://www.linkedin.com/posts/mobolu-olowoyeye_last-friday-i-had-the-honour-of-receiving-activity-7131606468180480000-e-hJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4BsegBdBC20xrWwUNOl46gO3AKdkgDEsw" target="_blank" rel="noopener">View on LinkedIn →</a></p>
                         </details>
 
                     </div>
@@ -733,14 +810,28 @@
                                     <span class="when">2025</span>
                                     <span class="what">
                                         <strong><a href="https://www.linkedin.com/posts/mobolu-olowoyeye_kingscollegelondon-keynote-publicspeaking-activity-7503838524509495298-ZJMo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4BsegBdBC20xrWwUNOl46gO3AKdkgDEsw" target="_blank" rel="noopener">Keynote Speaker</a></strong>
-                                        <span class="where">King's College London Black Access Project Event</span>
+                                        <span class="where">Black Access Project Event · King's College London </span>
+                                    </span>
+                                </li>
+                                <li class="visible">
+                                    <span class="when">2024</span>
+                                    <span class="what">
+                                        <strong><a href="https://www.whsb.essex.sch.uk/key-information/news/whsbs-annual-celebration-of-international-womens-day-iwd" target="_blank" rel="noopener">International Women's Day Speech</a></strong>
+                                        <span class="where">Celebrating Women in STEM · Westcliff High School for Boys</span>
                                     </span>
                                 </li>
                                 <li class="visible">
                                     <span class="when">2023</span>
                                     <span class="what">
-                                        <strong><a href="https://www.whsb.essex.sch.uk/key-information/news/whsbs-annual-celebration-of-international-womens-day-iwd" target="_blank" rel="noopener">International Women's Day Speech</a></strong>
-                                        <span class="where">Celebrating Women in STEM · Westcliff High School for Boys</span>
+                                        <strong><a href="https://www.linkedin.com/posts/mobolu-olowoyeye_last-friday-i-had-the-honour-of-receiving-activity-7131606468180480000-e-hJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4BsegBdBC20xrWwUNOl46gO3AKdkgDEsw" target="_blank" rel="noopener">Unveiling the Black Box Bias</a></strong>
+                                        <span class="where">Unveiling the Black Box Bias · House of Lords</span>
+                                    </span>
+                                </li>
+                                <li class="visible">
+                                    <span class="when">2023</span>
+                                    <span class="what">
+                                        <strong><a href="https://www.linkedin.com/posts/mobolu-olowoyeye_aiethics-bias-algorithms-activity-7104569744048934913-vqZY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4BsegBdBC20xrWwUNOl46gO3AKdkgDEswd" target="_blank" rel="noopener">AI ethics and algorithmic bias</a></strong>
+                                        <span class="where">AI ethics and algorithmic bias · University of Oxford</span>
                                     </span>
                                 </li>
                             </ul>
