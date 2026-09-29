@@ -553,6 +553,15 @@
                 border-bottom: none;
             }
 
+            .wave-ticker { overflow: hidden; margin: -8px 0 8px; }
+            .wave-ticker svg { width: 100%; height: auto; display: block; }
+            .wave-ticker text {
+                font: 500 40px "Helvetica Neue", Arial, sans-serif;
+                letter-spacing: 0.02em;
+                fill: currentColor;
+                white-space: pre;
+            }
+
             .opp-section {
                 border-top: 1px solid var(--line);
             }
@@ -605,6 +614,25 @@
             .opp-list li:first-child {
                 border-top: none;
                 padding-top: 0;
+            }
+
+            .opp-intro {
+                margin: 0 0 8px;
+                color: var(--ink-soft);
+                font-size: 16px;
+            }
+
+            .opp-group {
+                margin: 24px 0 2px;
+                font-size: 16px;
+                font-weight: 600;
+                color: var(--accent);
+            }
+
+            .opp-group-note {
+                margin: 0 0 12px;
+                color: var(--ink-soft);
+                font-size: 15px;
             }
 
             .contact-links {
@@ -937,6 +965,16 @@
             <section id="opportunities">
                 <div class="wrap">
                     <h2 class="section-title">Opportunities</h2>
+
+                    <div class="wave-ticker">
+                        <svg viewBox="0 0 1440 200" role="img"
+                             aria-label="Apply even if you think you won't get it">
+                            <path id="wave" fill="none"
+                                  d="M0,110 Q180,40 360,110 T720,110 T1080,110 T1440,110 T1800,110 T2160,110 T2520,110" />
+                            <text><textPath id="tp" href="#wave" startOffset="0"></textPath></text>
+                        </svg>
+                    </div>
+
                     <p>A running list of programmes, scholarships, and schemes worth applying to if you're
                     a young person or woman looking to get into tech.</p>
 
@@ -963,6 +1001,45 @@
                         </ul>
                     </details>
 
+                    <details class="opp-section">
+                        <summary>Learning how to code</summary>
+                        <p class="opp-intro">Learning resources for beginners.</p>
+
+                        <h3 class="opp-group">Interactive, beginner-friendly platforms</h3>
+                        <p class="opp-group-note">These make learning less intimidating.</p>
+                        <ul class="opp-list">
+                            <li><a href="https://www.freecodecamp.org" target="_blank" rel="noopener">freeCodeCamp</a> — Free, just sign up. Beginner-friendly, covers HTML, CSS, JavaScript, Python and more, with projects and certificates.</li>
+                            <li><a href="https://www.codecademy.com" target="_blank" rel="noopener">Codecademy</a> — Guided, interactive coding exercises in multiple languages.</li>
+                            <li><a href="https://www.kaggle.com/learn" target="_blank" rel="noopener">Kaggle Learn</a> — Great for Python and data science beginners, with short, hands-on lessons.</li>
+                            <li><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a> — Simple explanations of syntax; good for quick lookups.</li>
+                        </ul>
+
+                        <h3 class="opp-group">YouTube &amp; free video courses</h3>
+                        <p class="opp-group-note">Visual learners thrive here.</p>
+                        <ul class="opp-list">
+                            <li><a href="https://www.youtube.com/@freecodecamp" target="_blank" rel="noopener">freeCodeCamp YouTube</a> — Full 8–12 hour crash courses for Python, JavaScript, SQL and more.</li>
+                            <li><a href="https://cs50.harvard.edu/x/" target="_blank" rel="noopener">CS50's Introduction to Computer Science (Harvard)</a> — Teaches problem-solving and coding fundamentals. Free via YouTube or edX.</li>
+                            <li><a href="https://www.youtube.com/@programmingwithmosh" target="_blank" rel="noopener">Programming with Mosh</a> — Clear, concise explanations for beginners.</li>
+                            <li><a href="https://www.udemy.com" target="_blank" rel="noopener">Udemy</a> — A variety of free and paid courses in many languages.</li>
+                        </ul>
+
+                        <h3 class="opp-group">Project-based learning</h3>
+                        <p class="opp-group-note">Learn by making things — it sticks better.</p>
+                        <ul class="opp-list">
+                            <li>Build a simple website (HTML, CSS, JS).</li>
+                            <li>Make a personal portfolio site. It shows employers you can do something practical.</li>
+                            <li>Code simple games like Tic Tac Toe or Snake, which are good for logic and loops.</li>
+                            <li>Automate boring tasks (file renaming, data scraping) with Python.</li>
+                        </ul>
+
+                        <h3 class="opp-group">Practice &amp; problem-solving</h3>
+                        <p class="opp-group-note">Consistency builds fluency.</p>
+                        <ul class="opp-list">
+                            <li><a href="https://leetcode.com" target="_blank" rel="noopener">LeetCode</a> — Good for algorithmic thinking (start with the easy ones).</li>
+                            <li><a href="https://www.hackerrank.com" target="_blank" rel="noopener">HackerRank</a> — Beginner-friendly coding challenges.</li>
+                        </ul>
+                    </details>
+
                     <!-- TODO: once the CV template is ready, wrap the text below in <a href="..." target="_blank" rel="noopener"> pointing at the file or Google Doc -->
                     <details class="opp-section">
                         <summary>CV Template for Students</summary>
@@ -977,11 +1054,12 @@
 
             <section id="speaking">
                 <div class="wrap">
-                    <h2 class="section-title">Speaking &amp; advocacy</h2>
+                    <h2 class="section-title">Public Speaking</h2>
                     <div class="speaking-layout">
                         <div class="speaking-content">
-                            <p>I speak on AI ethics and on making tech feel reachable for people who don't usually see themselves in it,
-                            from school events to university keynotes.</p>
+                            <p>I speak about representation in tech, women in STEM, AI ethics and algorithmic bias, empowering the next
+                            generation of young people entering the corporate world. I also work on making tech feel reachable for
+                            people who don't usually see themselves in it, from school events to university keynotes.</p>
                             <ul class="timeline">
                                 <li class="visible">
                                     <span class="when">2025</span>
@@ -1063,6 +1141,28 @@
             }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
 
             timelineItems.forEach(item => observer.observe(item));
+        </script>
+        <script>
+            document.fonts.ready.then(() => {
+                const tp = document.getElementById("tp");
+                const unit = "APPLY EVEN IF YOU THINK YOU WON'T GET IT      ♡      ";
+
+                tp.textContent = unit;
+                const w = tp.parentNode.getComputedTextLength();
+                tp.textContent = unit.repeat(Math.ceil(2800 / w) + 2);
+
+                const speed = 80; // pixels per second
+                const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+                let start = null;
+
+                function tick(t) {
+                    if (start === null) start = t;
+                    const x = -(((t - start) / 1000 * speed) % w);
+                    tp.setAttribute("startOffset", x);
+                    if (!reduce) requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            });
         </script>
     </body>
 </html>
