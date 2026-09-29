@@ -4,24 +4,62 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="google-site-verification" content="L1emrlT0jNFTD1x796sJIxsmyr6puDclWVL_NnQelt8" />
-        <title>Mobolu Olowoyeye</title>
-        <meta property="og:title" content="Mobolu Olowoyeye">
-        <meta property="og:description" content="Software engineer, AI Student, content creator and AI ethics speaker.">
-        <meta property="og:image" content="https://moboluolowoyeye.com/images/my-headshot.jpg">
+        <title>Mobolu Olowoyeye | Software Engineer &amp; AI Ethics Speaker</title>
+        <link rel="canonical" href="https://moboluolowoyeye.com/">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Mobolu Olowoyeye">
+        <meta property="og:title" content="Mobolu Olowoyeye | Software Engineer &amp; AI Ethics Speaker">
+        <meta property="og:description" content="Software engineer, AI student, content creator and AI ethics speaker.">
+        <meta property="og:image" content="https://moboluolowoyeye.com/images/og-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="1200">
+        <meta property="og:image:alt" content="Headshot of Mobolu Olowoyeye">
         <meta property="og:url" content="https://moboluolowoyeye.com/">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Mobolu Olowoyeye | Software Engineer &amp; AI Ethics Speaker">
+        <meta name="twitter:description" content="Software engineer, AI student, content creator and AI ethics speaker.">
+        <meta name="twitter:image" content="https://moboluolowoyeye.com/images/og-image.jpg">
+        <meta name="twitter:image:alt" content="Headshot of Mobolu Olowoyeye">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
         <link rel="manifest" href="site.webmanifest">
-        <meta name="description" content="Mobolu Olowoyeye is a software engineer and AI ethics 
-        speaker, currently on placement with Kraken Technologies while studying AI at King's College London.">
+        <meta name="description" content="Mobolu Olowoyeye is a software engineer and AI ethics speaker, currently on placement with Kraken Technologies while studying AI at King's College London.">
         <script type="application/ld+json">
             {
-                 "@context": "https://schema.org",
-                 "@type": "WebSite",
-                 "name": "Mobolu Olowoyeye",
-                 "url": "https://moboluolowoyeye.com/"
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://moboluolowoyeye.com/#website",
+                        "name": "Mobolu Olowoyeye",
+                        "url": "https://moboluolowoyeye.com/",
+                        "publisher": { "@id": "https://moboluolowoyeye.com/#person" }
+                    },
+                    {
+                        "@type": "Person",
+                        "@id": "https://moboluolowoyeye.com/#person",
+                        "name": "Mobolu Olowoyeye",
+                        "url": "https://moboluolowoyeye.com/",
+                        "image": "https://moboluolowoyeye.com/images/my-headshot.jpg",
+                        "jobTitle": "Software Engineer",
+                        "description": "Software engineer, AI student and AI ethics speaker.",
+                        "worksFor": {
+                            "@type": "Organization",
+                            "name": "Kraken Technologies"
+                        },
+                        "affiliation": {
+                            "@type": "CollegeOrUniversity",
+                            "name": "King's College London"
+                        },
+                        "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Software Engineering", "AI Ethics"],
+                        "sameAs": [
+                            "https://www.linkedin.com/in/mobolu-olowoyeye/",
+                            "https://instagram.com/mobsintech"
+                        ]
+                    }
+                ]
             }
         </script>
         <style>
@@ -39,7 +77,9 @@
             * {box-sizing: border-box; }
 
             /* When the page jumps to an anchor like the nav links (about, experience, etc.), smooth animates the scroll, gliding down the page rather than jumping abruptly.*/
-            html {scroll-behavior: smooth; } 
+            @media (prefers-reduced-motion: no-preference) {
+                html { scroll-behavior: smooth; }
+            }
 
             body{
                 margin: 0;
@@ -97,7 +137,8 @@
             nav ul {
                 list-style: none;
                 display: flex;
-                gap: 22px;
+                flex-wrap: wrap;
+                gap: 8px 22px;
                 margin: 0;
                 padding: 0;
                 font-size: 15px;
@@ -143,6 +184,7 @@
                 height: 360px;
                 object-fit: cover;
                 border: none;
+                border-radius: 16px;
             }
 
             .hero h1 {
@@ -150,6 +192,26 @@
                 font-weight: 700;
                 line-height: 1.15;
                 letter-spacing: -0.01em;
+            }
+
+            .hero h1 .word {
+                display: inline-block;
+            }
+
+            @media (prefers-reduced-motion: no-preference) {
+                .hero h1 .word {
+                    opacity: 0;
+                    transform: translateY(0.5em);
+                    animation: word-rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+                    animation-delay: calc(var(--i) * 140ms + 100ms);
+                }
+            }
+
+            @keyframes word-rise {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
 
             .hero .role {
@@ -167,7 +229,10 @@
             }
 
             h2.section-title {
-                font-size: 26px;
+                font-size: clamp(34px, 5.5vw, 48px);
+                font-weight: 700;
+                line-height: 1.15;
+                letter-spacing: -0.01em;
                 margin-bottom: 28px;
             }
 
@@ -311,6 +376,7 @@
                 font-size: 13px;
                 transition: border-color 0.2s ease;
                 overflow: hidden;
+                border-radius: 12px;
             }
 
             .project-thumb-a4 img {
@@ -348,6 +414,7 @@
                 font-size: 13px;
                 transition: border-color 0.2s ease;
                 overflow: hidden;
+                border-radius: 12px;
             }
 
             .project-thumb img {
@@ -387,11 +454,20 @@
                 min-width: 0;
             }
 
-            .speaking-img {
+            .speaking-photos {
                 flex-shrink: 0;
                 width: 220px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .speaking-img {
+                display: block;
+                width: 100%;
                 object-fit: cover;
                 border: none;
+                border-radius: 16px;
             }
 
             .speaking-note {
@@ -399,15 +475,75 @@
                 color: var(--ink-soft);
             }
 
+            .reading-list {
+                margin-top: 56px;
+                padding-top: 40px;
+                border-top: 1px solid var(--line);
+            }
+
+            .reading-list h3 {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1.3;
+                max-width: 32ch;
+            }
+
+            .books {
+                margin-top: 28px;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                max-width: 560px;
+                gap: 24px;
+            }
+
+            .book-cover {
+                display: block;
+                width: 100%;
+                aspect-ratio: 2 / 3;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+
+            .book-title {
+                display: block;
+                margin-top: 12px;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 1.35;
+                color: var(--ink);
+            }
+
+            .book-author {
+                display: block;
+                margin-top: 2px;
+                font-size: 14px;
+                color: var(--ink-soft);
+            }
+
+            .contact-title {
+                font-size: clamp(34px, 5.5vw, 48px);
+                font-weight: 700;
+                line-height: 1.15;
+                letter-spacing: -0.01em;
+            }
+
+            .contact-intro {
+                margin-top: 18px;
+                color: var(--ink-soft);
+                font-size: 18px;
+                max-width: 50ch;
+            }
+
             .form-button {
                 display: inline-block;
-                margin: 20px 0 32px;
+                margin: 28px 0 40px;
                 padding: 13px 28px;
                 background: var(--accent);
                 color:#0D0D0D;
                 font-size: 15px;
                 font-weight: 700;
                 border-bottom: none;
+                border-radius: 12px;
             }
 
             .form-button:hover, .form-button:focus-visible {
@@ -472,8 +608,8 @@
 
             .contact-links {
                 display: flex;
-                flex-direction: column;
-                gap: 10px;
+                flex-wrap: wrap;
+                gap: 12px 28px;
                 font-size: 16px;
             }
 
@@ -494,6 +630,9 @@
             }
 
             @media (max-width: 560px) {
+                nav ul {
+                    gap: 8px 16px;
+                }
                 .timeline li {
                     grid-template-columns: 1fr;
                     gap: 4px;
@@ -518,7 +657,7 @@
                 .speaking-layout {
                     flex-direction: column;
                 }
-                .speaking-img {
+                .speaking-photos {
                     width: 100%;
                 }
             }
@@ -548,10 +687,10 @@
             <section class="hero">
                 <div class="wrap">
                     <div class="hero-text">
-                        <h1>Hi, I'm Mobolu.</h1>
+                        <h1 aria-label="Hi, I'm Mobolu."><span class="word" style="--i:0" aria-hidden="true">Hi,</span> <span class="word" style="--i:1" aria-hidden="true">I'm</span> <span class="word name" style="--i:2" aria-hidden="true">Mobolu.</span></h1>
                         <p class="role">
                         I'm an Artificial Intelligence undergraduate with a passion for using technology as a tool for positive change. 
-                        I'm currently studying a BSc in Artificial Intelligence at King's College london. I'm on a software engineering placement with the AI &amp; Machine Learning team at Kraken Technologies,
+                        I'm currently studying a BSc in Artificial Intelligence at King's College London. I'm on a software engineering placement with the AI &amp; Machine Learning team at Kraken Technologies,
                         and I also speak about representation in tech and AI ethics on the side!
                         </p>
                         <div class="links">
@@ -697,8 +836,8 @@
             <section id="research">
                 <div class="wrap">
                     <h2 class="section-title">Research &amp; Projects</h2>
-                    <p>Here I'll add summaries of projects I've researched, published, or worked on academically here, papers,
-                    coursework projects, dissertations, or anything else that's cool!</p>
+                    <p>A selection of the research, coursework and personal projects I've worked on, from academic
+                    posters and research work to machine learning and software builds.</p>
                     <div class="project-grid">
 
                         <details class="project-card">
@@ -727,7 +866,7 @@
 
                         <details class="project-card">
                             <summary>
-                                <div class="project-thumb"><img src="images/ai-healthcare.png" alt="AI Medical Diagnosus"></div>
+                                <div class="project-thumb"><img src="images/ai-healthcare.png" alt="AI Medical Diagnosis"></div>
                                 <strong class="project-title">Care Sense: AI Medical Diagnosis Tool</strong>
                             </summary>
                             <p class="project-desc">An AI diagnosis assistant that can aid doctors in diagnosing patients.</p>
@@ -743,10 +882,10 @@
 
                         <details class="project-card">
                             <summary>
-                                <div class="project-thumb"><img src="images/robotics.png" alt="Photo of my roboitcs lab"></div>
+                                <div class="project-thumb"><img src="images/robotics.png" alt="Photo of my robotics lab"></div>
                                 <strong class="project-title">Robotics: Room classification Project</strong>
                             </summary>
-                            <p class="project-desc">Built a YOLOv4 &  ROS robot system that classifies the room it’s in, detecting objects using weighted object-to-room mappings.</p>
+                            <p class="project-desc">Built a YOLOv4 &amp; ROS robot system that classifies the room it’s in, detecting objects using weighted object-to-room mappings.</p>
                         </details>
 
                     </div>
@@ -758,7 +897,7 @@
                                 <div class="project-thumb-a4"><img src="images/ml-poster.png" alt="ML poster"></div>
                                 <strong class="project-title">Active Learning on a Budget: TPCDC Implementation on CIFAR-10</strong>
                             </summary>
-                            <p class="project-desc">Short summary of this project — what it does, why it matters, and where to find it.</p>
+                            <p class="project-desc">Implementation of an active learning strategy (TPCDC) on CIFAR-10, awarded 100 in my Machine Learning module.</p>
                         </details>
 
                         <details class="project-card">
@@ -766,9 +905,30 @@
                                 <div class="project-thumb-a4"><img src="images/frt-poster.jpeg" alt="FRT poster"></div>
                                 <strong class="project-title">The Dark Side of AI Facial Recognition: Unveiling the Black Box Bias</strong>
                             </summary>
-                            <p class="project-desc">Academic research poster, titled ‘The Dark Side of AI Facial Recognition: Unveiling the Black Box Bias’, which addresses the problem of algorithmic bias in facial recognition technology. <a href="https://www.linkedin.com/posts/mobolu-olowoyeye_last-friday-i-had-the-honour-of-receiving-activity-7131606468180480000-e-hJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4BsegBdBC20xrWwUNOl46gO3AKdkgDEsw" target="_blank" rel="noopener">View on LinkedIn →</a></p>
+                            <p class="project-desc">Academic research poster, titled ‘The Dark Side of AI Facial Recognition: Unveiling the Black Box Bias’, which addresses the problem of algorithmic bias in facial recognition technology. <a href="https://www.linkedin.com/posts/mobolu-olowoyeye_last-friday-i-had-the-honour-of-receiving-activity-7131606468180480000-e-hJ" target="_blank" rel="noopener">View on LinkedIn →</a></p>
                         </details>
 
+                    </div>
+
+                    <div class="reading-list">
+                        <h3>Interested in learning more about algorithmic bias? Dive into these.</h3>
+                        <div class="books">
+                            <div class="book">
+                                <img class="book-cover" src="images/weapons-of-math-destruction.jpg" alt="Cover of Weapons of Math Destruction by Cathy O'Neil" loading="lazy">
+                                <span class="book-title">Weapons of Math Destruction</span>
+                                <span class="book-author">Cathy O'Neil</span>
+                            </div>
+                            <div class="book">
+                                <img class="book-cover" src="images/algorihtms-of-opression.jpg" alt="Cover of Algorithms of Oppression by Safiya Umoja Noble" loading="lazy">
+                                <span class="book-title">Algorithms of Oppression</span>
+                                <span class="book-author">Safiya Umoja Noble</span>
+                            </div>
+                            <div class="book">
+                                <img class="book-cover" src="images/coded-bias-documentary.jpg" alt="Poster for the documentary Coded Bias" loading="lazy">
+                                <span class="book-title">Coded Bias</span>
+                                <span class="book-author">Documentary featuring Joy Buolamwini</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -790,7 +950,7 @@
                     <details class="opp-section">
                         <summary>Undergraduate Students</summary>
                         <ul class="opp-list">
-                            <li><a href="#" target="_blank" rel="noopener">Opportunity name — who it's for, deadline</a></li>
+                            <li><a href="https://10000internsfoundation.com/students-graduates/" target="_blank" rel="noopener">10K Black Interns — internships and career opportunities for Black students and graduates</a></li>
                         </ul>
                     </details>
 
@@ -798,6 +958,14 @@
                         <summary>Women &amp; BAME</summary>
                         <ul class="opp-list">
                             <li><a href="https://beleveuk.org" target="_blank" rel="noopener">BelEve UK — Mentoring for women and girls</a></li>
+                        </ul>
+                    </details>
+
+                    <!-- TODO: once the CV template is ready, wrap the text below in <a href="..." target="_blank" rel="noopener"> pointing at the file or Google Doc -->
+                    <details class="opp-section">
+                        <summary>CV Template for Students</summary>
+                        <ul class="opp-list">
+                            <li>A free, ready-to-use CV template for students applying to internships and placements. Coming soon.</li>
                         </ul>
                     </details>
 
@@ -810,14 +978,13 @@
                     <h2 class="section-title">Speaking &amp; advocacy</h2>
                     <div class="speaking-layout">
                         <div class="speaking-content">
-                            <p>I speak on AI ethics and on making tech feel reachable for people who don't usually see themselves in it.
-                            Still early days on this front, but the goal is to keep doing bigger versions of it over time.</p>
-                            <p class="speaking-note">I'll list more talks and features here once I've done a few more.</p>
+                            <p>I speak on AI ethics and on making tech feel reachable for people who don't usually see themselves in it,
+                            from school events to university keynotes.</p>
                             <ul class="timeline">
                                 <li class="visible">
                                     <span class="when">2025</span>
                                     <span class="what">
-                                        <strong><a href="https://www.linkedin.com/posts/mobolu-olowoyeye_kingscollegelondon-keynote-publicspeaking-activity-7503838524509495298-ZJMo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4BsegBdBC20xrWwUNOl46gO3AKdkgDEsw" target="_blank" rel="noopener">Keynote Speaker</a></strong>
+                                        <strong><a href="https://www.linkedin.com/posts/mobolu-olowoyeye_kingscollegelondon-keynote-publicspeaking-activity-7503838524509495298-ZJMo" target="_blank" rel="noopener">Keynote Speaker</a></strong>
                                         <span class="where">Black Access Project Event · King's College London </span>
                                     </span>
                                 </li>
@@ -831,29 +998,32 @@
                                 <li class="visible">
                                     <span class="when">2023</span>
                                     <span class="what">
-                                        <strong><a href="https://www.linkedin.com/posts/mobolu-olowoyeye_last-friday-i-had-the-honour-of-receiving-activity-7131606468180480000-e-hJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4BsegBdBC20xrWwUNOl46gO3AKdkgDEsw" target="_blank" rel="noopener">Unveiling the Black Box Bias</a></strong>
+                                        <strong><a href="https://www.linkedin.com/posts/mobolu-olowoyeye_last-friday-i-had-the-honour-of-receiving-activity-7131606468180480000-e-hJ" target="_blank" rel="noopener">Unveiling the Black Box Bias</a></strong>
                                         <span class="where">Unveiling the Black Box Bias · House of Lords</span>
                                     </span>
                                 </li>
                                 <li class="visible">
                                     <span class="when">2023</span>
                                     <span class="what">
-                                        <strong><a href="https://www.linkedin.com/posts/mobolu-olowoyeye_aiethics-bias-algorithms-activity-7104569744048934913-vqZY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4BsegBdBC20xrWwUNOl46gO3AKdkgDEswd" target="_blank" rel="noopener">AI ethics and algorithmic bias</a></strong>
+                                        <strong><a href="https://www.linkedin.com/posts/mobolu-olowoyeye_aiethics-bias-algorithms-activity-7104569744048934913-vqZY" target="_blank" rel="noopener">AI ethics and algorithmic bias</a></strong>
                                         <span class="where">AI ethics and algorithmic bias · University of Oxford</span>
                                     </span>
                                 </li>
                             </ul>
                         </div>
-                        <img src="images/speaking-img.jpg" alt="Mobolu speaking" class="speaking-img">
+                        <div class="speaking-photos">
+                            <img src="images/speaking-img.jpg" alt="Mobolu speaking" class="speaking-img">
+                            <img src="images/speaking-hackathon.jpeg" alt="Mobolu presenting at a hackathon" class="speaking-img" loading="lazy">
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section id="contact">
                 <div class="wrap">
-                    <h2 class="section-title">Contact</h2>
-                    <p>You can reach me through the form below.</p>  <!-- Might want to change this to be booking enquiry specific-->
-                    <a class="form-button" href="https://docs.google.com/forms/d/e/1FAIpQLSd0YkEjfZ_2QN_5swJ_QwrQgCXYVKepVwOT57Jd5OnDLk5NeA/viewform?usp=publish-editor" target="_blank" rel="noopener"> Get in touch</a>
+                    <h2 class="contact-title">Let's get in touch.</h2>
+                    <p class="contact-intro">Have a question, an idea, or just want to say hello? Send me a message and I'll get back to you.</p>
+                    <a class="form-button" href="https://docs.google.com/forms/d/e/1FAIpQLSd0YkEjfZ_2QN_5swJ_QwrQgCXYVKepVwOT57Jd5OnDLk5NeA/viewform?usp=publish-editor" target="_blank" rel="noopener">Get in touch</a>
                     <div class="contact-links">
                         <a href="https://instagram.com/mobsintech" target="_blank" rel="noopener">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
