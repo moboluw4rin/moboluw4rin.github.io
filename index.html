@@ -57,7 +57,8 @@
                         "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Software Engineering", "AI Ethics"],
                         "sameAs": [
                             "https://www.linkedin.com/in/mobolu-olowoyeye/",
-                            "https://instagram.com/mobsintech"
+                            "https://instagram.com/mobsintech",
+                            "https://github.com/moboluw4rin"
                         ]
                     }
                 ]
@@ -72,7 +73,7 @@
                 --accent-2: #FF3B5C;
                 --accent-soft: rgba(255,199,0,0.08);
                 --line: #262626;
-                --max-width: 720px;
+                --max-width: 1050px;
             }
 
             * {box-sizing: border-box; }
@@ -486,7 +487,6 @@
                 font-size: 20px;
                 font-weight: 600;
                 line-height: 1.3;
-                max-width: 32ch;
             }
 
             .books {
@@ -652,6 +652,44 @@
                 flex-shrink: 0;
             }
 
+            .company-logos {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                gap: 16px;
+                margin-top: 32px;
+            }
+
+            .company-logos img {
+                flex: 0 1 90px;
+                min-width: 0;
+                aspect-ratio: 4 / 3;
+                object-fit: cover;
+                border: 1px solid var(--line);
+                border-radius: 12px;
+            }
+
+            .experience-video {
+                margin: 32px auto;
+                max-width: 640px;
+                text-align: center;
+            }
+
+            .experience-video video {
+                display: block;
+                width: 100%;
+                height: auto;
+                border: 1px solid var(--line);
+                border-radius: 12px;
+                background: var(--bg);
+            }
+
+            .experience-video figcaption {
+                margin-top: 12px;
+                color: var(--ink-soft);
+                font-size: 15px;
+            }
+
             footer {
                 padding: 40px 0 60px;
                 color: var(--ink-soft);
@@ -734,8 +772,8 @@
             <section id="about">
                 <div class="wrap">
                     <h2 class="section-title">About</h2>
-                    <p>I'm a 3rd year AI student at King's College London. Right now I'm on
-                     a year-long placement with Kraken's AI &amp; Machine Learning team. 
+                    <p>I'm a 3rd year AI student at King's College London with a passion for using technology as a tool for positive change! 
+                    Right now I'm undertaking a 12 month placement with Kraken's AI &amp; Machine Learning team. 
                     I spend my days figuring out how to make AI systems actually work in production, not just in a notebook.</p>
                     <p>Outside of that, I write and speak about AI ethics, and about what it actually takes to get into tech 
                     if you don't look like the people who usually do. I run <a href="https://instagram.com/mobsintech" target="_blank" rel="noopener">@mobsintech</a>
@@ -747,6 +785,16 @@
             <section id="experience">
                 <div class="wrap">
                     <h2 class="section-title">Experience</h2>
+                    <p>I've had the opportunity to contribute to software engineering, AI &amp; data projects across multiple industries from finance and insurance to healthcare and energy. You can see some of my journey below!</p>
+
+                    <figure class="experience-video">
+                        <video controls playsinline preload="metadata" aria-label="Video from my data science internship at QBE Insurance">
+                            <source src="videos/qbe-internship.mp4" type="video/mp4">
+                            Your browser doesn't support embedded video.
+                        </video>
+                        <figcaption>Where it all began: 16-year-old me speaking about my very first internship!</figcaption>
+                    </figure>
+
                     <div class="timeline">
 
                         <details class="year-section" open>
@@ -858,10 +906,18 @@
                         </details>
 
                     </div>
+
+                    <div class="company-logos">
+                        <img src="images/kraken-logo.png" alt="Kraken Technologies logo" loading="lazy">
+                        <img src="images/kcl-logo.jpeg" alt="King's College London logo" loading="lazy">
+                        <img src="images/g-research-logo.jpg" alt="G-Research logo" loading="lazy">
+                        <img src="images/qbe-logo.webp" alt="QBE Insurance logo" loading="lazy">
+                        <img src="images/deliveroo-logo.png" alt="Deliveroo logo" loading="lazy">
+                    </div>
                 </div>
 
             </section>
-            
+
             <section id="research">
                 <div class="wrap">
                     <h2 class="section-title">Research &amp; Projects</h2>
@@ -1062,7 +1118,7 @@
                             people who don't usually see themselves in it, from school events to university keynotes.</p>
                             <ul class="timeline">
                                 <li class="visible">
-                                    <span class="when">2025</span>
+                                    <span class="when">2026</span>
                                     <span class="what">
                                         <strong><a href="https://www.linkedin.com/posts/mobolu-olowoyeye_kingscollegelondon-keynote-publicspeaking-activity-7503838524509495298-ZJMo" target="_blank" rel="noopener">Keynote Speaker</a></strong>
                                         <span class="where">Black Access Project Event · King's College London </span>
@@ -1116,6 +1172,12 @@
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
                             Mobolu Olowoyeye
+                        </a>
+                        <a href="https://github.com/moboluw4rin" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg>
+                            moboluw4rin
                         </a>
                     </div>
                 </div>
