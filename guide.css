@@ -1,0 +1,103 @@
+/* Styles for guide pages (resources). Uses the colour variables from style.css. */
+
+.guide {
+    padding: 64px 0 40px;
+}
+
+.guide .wrap {
+    max-width: 780px; /* narrower than the rest of the site so long text is easy to read */
+}
+
+.guide h1 {
+    font-size: clamp(34px, 5.5vw, 48px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+}
+
+.guide h1 + p em {
+    color: var(--ink-soft);
+    font-size: 19px;
+}
+
+.guide h2 {
+    font-size: clamp(26px, 4vw, 32px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 56px 0 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+}
+
+.guide h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 28px 0 10px;
+}
+
+.guide ul {
+    margin: 0 0 16px;
+    padding-left: 22px;
+}
+
+.guide li {
+    margin-bottom: 6px;
+}
+
+.guide li::marker {
+    color: var(--accent);
+}
+
+.guide strong {
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.guide em {
+    color: var(--ink-soft);
+}
+
+/* "At a glance" comparison table */
+.guide table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 16px;
+    font-size: 15px;
+    display: block;      /* lets the table scroll sideways on phones */
+    overflow-x: auto;
+}
+
+.guide th,
+.guide td {
+    text-align: left;
+    vertical-align: top;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    min-width: 150px;
+}
+
+.guide th {
+    color: var(--accent);
+    font-weight: 700;
+    background: var(--accent-soft);
+}
+
+/* "My take" boxes */
+.guide blockquote {
+    margin: 20px 0;
+    padding: 16px 20px;
+    border-left: 3px solid var(--accent-2);
+    background: rgba(255, 59, 92, 0.06);
+    border-radius: 0 8px 8px 0;
+}
+
+.guide blockquote p {
+    margin: 0;
+}
+
+@media (max-width: 560px) {
+    .guide { padding-top: 40px; }
+    .guide h2 { margin-top: 44px; }
+}

@@ -786,3 +786,32 @@ a.site-name {
 nav a[aria-current="page"] {
     color: var(--ink);
 }
+
+/* Resources index */
+.resource-list {
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.resource-list li {
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+}
+
+.resource-list li:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.resource-list a {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.resource-list p {
+    margin: 6px 0 0;
+    color: var(--ink-soft);
+    font-size: 16px;
+}

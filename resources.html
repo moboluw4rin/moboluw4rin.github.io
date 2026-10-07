@@ -1,0 +1,84 @@
+---
+title: Resources
+description: Free guides for students breaking into tech, written by Mobolu Olowoyeye.
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resources | Mobolu Olowoyeye</title>
+        <link rel="canonical" href="https://moboluolowoyeye.com/resources.html">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Mobolu Olowoyeye">
+        <meta property="og:title" content="Resources | Mobolu Olowoyeye">
+        <meta property="og:description" content="Free guides for students breaking into tech, written by Mobolu Olowoyeye.">
+        <meta property="og:image" content="https://moboluolowoyeye.com/images/og-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="1200">
+        <meta property="og:image:alt" content="Headshot of Mobolu Olowoyeye">
+        <meta property="og:url" content="https://moboluolowoyeye.com/resources.html">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Resources | Mobolu Olowoyeye">
+        <meta name="twitter:description" content="Free guides for students breaking into tech, written by Mobolu Olowoyeye.">
+        <meta name="twitter:image" content="https://moboluolowoyeye.com/images/og-image.jpg">
+        <meta name="twitter:image:alt" content="Headshot of Mobolu Olowoyeye">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+        <link rel="manifest" href="site.webmanifest">
+        <meta name="description" content="Free guides for students breaking into tech, written by Mobolu Olowoyeye.">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header class="site-nav">
+            <div class="wrap">
+                <a class="site-name" href="index.html">Mobolu</a>
+                <nav aria-label="Primary">
+                    <ul>
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="opportunities.html">Opportunities</a></li>
+                        <li><a href="resources.html" aria-current="page">Resources</a></li>
+                        <li><a href="speaking.html">Speaking</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="resources">
+                <div class="wrap">
+                    <h2 class="section-title">Resources</h2>
+
+                    <p>Free guides for students breaking into tech. New guides appear here automatically.</p>
+
+                    {% assign guides = site.pages | where_exp: "p", "p.path contains 'resources/'" | sort: "title" %}
+                    {% if guides.size > 0 %}
+                    <ul class="resource-list">
+                        {% for guide in guides %}
+                        <li>
+                            <a href="{{ guide.url }}">{{ guide.title }}</a>
+                            <p>{{ guide.description }}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% else %}
+                    <p>Guides coming soon.</p>
+                    {% endif %}
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="wrap">
+                <p>© 2026 Mobolu Olowoyeye</p>
+            </div>
+        </footer>
+    </body>
+</html>
