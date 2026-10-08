@@ -59,6 +59,15 @@
     color: var(--ink-soft);
 }
 
+/* Images in guides */
+.guide img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
 /* "At a glance" comparison table */
 .guide table {
     width: 100%;
